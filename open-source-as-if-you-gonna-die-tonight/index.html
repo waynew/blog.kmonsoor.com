@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+
+    <title>  Open Source as-if You Gonna Die Tonight
+ | kmonsoor's online hub</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content=""/>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/bootstrap/2.3.2/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/bootstrap/2.3.2/css/bootstrap-responsive.min.css"/>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/fontawesome/4.0.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.0/magnific-popup.min.css"/>
+    <link rel="stylesheet" href="http://blog.kmonsoor.com/theme/css/jquery.mglass.css"/>
+    <link rel="stylesheet" href="http://blog.kmonsoor.com/theme/css/pygment-solarized-dark.css"/>
+    <link rel="stylesheet" href="http://blog.kmonsoor.com/theme/css/style.css"/>
+
+    <!-- Fonts -->
+    <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
+    <link href='//fonts.googleapis.com/css?family=Istok+Web' rel='stylesheet' type='text/css'/>
+    <link href='//fonts.googleapis.com/css?family=Droid+Sans+Mono' rel='stylesheet' type='text/css'/>
+      <link href='//fonts.googleapis.com/css?family=Expletus+Sans' rel='stylesheet' type='text/css'>
+
+
+    <link rel="icon" href="http://blog.kmonsoor.com/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="http://blog.kmonsoor.com/favicon.ico" type="image/x-icon">
+
+    <!-- Feeds -->
+      <link href="/feed/atom/index.html" type="application/atom+xml" rel="alternate" title="kmonsoor&#39;s online hub Atom Feed"/>
+      <link href="/feed/index.html" type="application/rss+xml" rel="alternate" title="kmonsoor&#39;s online hub RSS Feed"/>
+      <link href="/category/tech/feed/atom/index.html" type="application/atom+xml" rel="alternate" title="kmonsoor&#39;s online hub Categories Atom Feed"/>
+      <link href="/category/tech/feed/index.html" type="application/rss+xml" rel="alternate" title="kmonsoor&#39;s online hub Categories RSS Feed"/>
+
+
+  </head>
+
+  <body>
+    <div class="container">
+
+      <header>
+        <div class="page-header">
+            <a href="http://blog.kmonsoor.com" class="avatar-container">
+              <div class="avatar ">
+                <div class="side"><img src="/logo.png"/></div>
+              </div>
+            </a>
+          <h1><a href="http://blog.kmonsoor.com">kmonsoor's online hub</a> <small>my internet corner</small></h1>
+        </div>
+
+        <div class="navbar">
+          <div class="navbar-inner">
+            <a class="brand" href="http://blog.kmonsoor.com" title="my internet corner">kmonsoor's online hub</a>
+            <ul class="nav">
+<li ><a href="/">Home</a></li>
+<li ><a href="/category/tech/">Tech</a></li>
+                  <li ><a href="http://blog.kmonsoor.com/about/">About</a></li>
+            </ul>
+              <form class="navbar-search pull-right" action="http://blog.kmonsoor.com/search.html" onsubmit="return validateForm(this.elements['q'].value);">
+                <input type="text" name="q" id="tipue_search_input" class="search-query span2" placeholder="Search" required/>
+                <i class="fa fa-search fa-fw"></i>
+              </form>
+          </div>
+        </div>
+      </header>
+
+      <section>
+
+        <div class="row">
+          <div class=" span9  ">
+  <h1>
+    <a href="http://blog.kmonsoor.com/open-source-as-if-you-gonna-die-tonight/" rel="bookmark" title="Permalink to Open Source as-if You Gonna Die Tonight">Open Source as-if You Gonna Die&nbsp;Tonight</a>
+  </h1>
+          </div>
+        </div>
+
+        <div class="row">
+
+
+          <div class=" span9 " id="content" role="main">
+  
+
+  <div>
+    <p><strong><em>[ To keep the spirit of this post honest, i am going to publish this blog, immidiately. No <strong>draft</strong>-ing. This post will be, i hope, under improvement continuously. This post is, right now, in version&nbsp;0.0.3]</em></strong></p>
+<p><strong>Yes, I mean it.&nbsp;Literally.</strong></p>
+<p>I see too many post/comments/blogs, in different meeting-places for techies e.g. hackernews, reddit, etc., which implies the same&nbsp;thing. </p>
+<blockquote>
+<p><span class="dquo">&#8220;</span>I am working on <strong><em>something</em></strong> which I will open-source/publish
+<strong><em>someday</em></strong> after taking it <strong><em>somewhere</em></strong>.&#8221;</p>
+</blockquote>
+<p>See the ambiguous sense in the&nbsp;words?  </p>
+<p>Unless the code/script/blog, you are working on, is something sensitive which will make a mess published in &#8220;draft&#8221;-situation, you should not wait that special &#8220;someday&#8221;. Or, unless you have thousands of subscribers for you blog posts, of&nbsp;course.</p>
+<p>Or, if you decided that you <strong><em>never</em></strong> gonna publish it in public, that&#8217;s entirely different&nbsp;story.</p>
+<p>If it is something of your company&#8217;s code-base, commit it in your remote-branch. So that your work of last 19-days isn&#8217;t just gone just because you are&nbsp;&#8220;gone&#8221;.</p>
+<p><strong>As human, we are far more fragile than we&nbsp;think.</strong></p>
+<p>I am not talking about publishing a book in a block-printing publishing house. In that scenario, writers were supposed to write the perfect words, then type it using type-writer to avoid any handwriting-related gotchas. Then reviewer, then prrofreader, then the press-man(don&#8217;t know what they were called) make a block by putting on character-by-character. Then it came to printing on the paper. So, the writer had to make sure what he is writing about, <span class="caps">ABSOLUTELY</span>. Else, each of the <em>2000</em> copies of the <em>first-edition</em> would have the same&nbsp;mistakes.</p>
+<p>I am also not talking about pushing the critical code in the <code>production</code> server. That staff should go through rigorous coding practices, code-reviews, testing&nbsp;etc.</p>
+<p>Except those cases, <strong>in this 2015</strong>, how much each of our <code>git push origin gh-pages</code> cost? How much each WordPress post update cost? Or, a single Github&nbsp;gist?</p>
+<p>As of today, publishing your staffs is literally free. No matter how many times you update&nbsp;that.</p>
+<p><strong>So, why our thinking paradigm around &#8220;publishing&#8221; is stuck in past press-publishing&nbsp;era?</strong></p>
+<h2>Frequently shared confusions (<span class="caps">FSQ</span>)</h2>
+<p><strong><em> What if this, my thing, is just plain crap ?</em>*<br />
+</strong>A.<strong> Are you sure? You never know for sure. Throw it in the wild. If it is really crap, nobody will remember or hold you responsible for it. How many crappy de-Vinci paintings you know? I guess, </strong><em>none.</em>* But, <a href="https://en.wikipedia.org/wiki/Mona_Lisa">Monalisa</a> didn&#8217;t just appear from thin air. Did&nbsp;it?</p>
+<ul>
+<li>
+<p><strong>This is my toy(or, pet) project.</strong>
+ <strong>A.</strong> Don&#8217;t be that selfish kid from the school who don&#8217;t let others touch it just because. If you are having fun building something why don&#8217;t let others join in the&nbsp;fun.</p>
+</li>
+<li>
+<p><strong>This is a one-off script on this <em><span class="caps">COBOL</span></em> platform, no one gonna need it.  Ever.</strong>
+ <strong>A.</strong> You never know. You are a human. You can&#8217;t imagine what people gonna need. Throw it in a <a href="https://gist.github.com/">gist</a>, just include a suitable title. Add in some comments if you please. May be couple of years later, your script gonna save someone&#8217;s job, hence his family&#8217;s bread-on-the-table. You never&nbsp;know.  </p>
+</li>
+<li>
+<p><strong>If i publish this now, some genius, with free time, will take away this idea and make it something grand without me.</strong>
+ <strong>A.</strong> Unless, you are a big hot-shot throwing a ground-breaking idea, no one gonna even notice it. Most <em>genius&#8217;</em> mind is already idea-ed down with their own to-do list. Even if they take away, let them. You move on. 
+ Don&#8217;t be a muddy pond, rather be like a river. Rivers don&#8217;t dry off due to peasents are &#8220;stealing&#8221; some&nbsp;water.  </p>
+</li>
+<li>
+<p><strong>Around this post, i haven&#8217;t collected my thoughts around it to make it a grand one. </strong>
+ <strong>A.</strong> Don&#8217;t think of yourself too high. Let others do that for you.<br />
+ No project born grand, no great man born great. Your contributions is what goes ahead. You the person? Not so much. Time passed along the &#8220;Romeo <span class="amp">&amp;</span> Juliet&#8221;, not much the &#8220;person&#8221;&nbsp;Shakespeare.  </p>
+</li>
+<li>
+<p><strong>I am special. My words/codes should be special, perfect, coherent like a pearl-necklace.</strong>  <em>(yes, we all do it, just don&#8217;t acknowledge it publicly.)</em><br />
+<strong>A.</strong> No, you are not. You are not something that special unique snowflake. See the previous&nbsp;answer.</p>
+</li>
+<li>
+<p><strong>Who the ***k are you to tell me what to do?</strong><br />
+<strong>A.</strong> It&#8217;s not about me, I am nobody. Just a open-source enthusiast to see more and more open-source projects, scripts, blog-posts which don&#8217;t necessarily have to go to the graves along their mortal creators. Here, am sharing just sharing my thinking around it.
+ <strong>It is your code on your own personal-pc, after&nbsp;all.</strong></p>
+</li>
+</ul>
+<h2>Why should I open my &#8220;source&#8221; right tonight&nbsp;?</h2>
+<ul>
+<li>
+<p>You can literally die tonight. 
+ And, all your pet-projects are just gone. &#8216;Cause probably none in your family is in coding business or they aren&#8217;t sure about your&nbsp;intention. </p>
+</li>
+<li>
+<p>Tomorrow morning, your mind will just drift-away.<br />
+ What is a vivid idea tonight which can impact thousands of people&#8217;s life, tomorrow morning it will become a faded, will-do-it-someday idea. One month after tonight, you probably become just oblivious about your own idea, draft, script,&nbsp;code.</p>
+</li>
+<li>
+<p>It&#8217;s a mind-trick to force it work on something to avoid public shame. We feel obliged to correct errata that is in public, not even 2% of that if it is in private, hidden in some local&nbsp;folder. </p>
+</li>
+</ul>
+<h2>To avoid the&nbsp;embarrassment</h2>
+<ul>
+<li>
+<p>Make sure your audience (or colleague for that matter) know the content&#8217;s status. Put a &#8220;prelude&#8221; section mentioning the half-done condition. Better, use some version&nbsp;number.</p>
+</li>
+<li>
+<p>Make it clear what it is all about. For coding staffs, roughly point out what it is, what it is supposed to do. For blog, present the basic idea at least, even it is not with a pertfect&nbsp;grammer.</p>
+</li>
+</ul>
+<h2>How infrastructure can&nbsp;improve</h2>
+<p>Open-source mainstream hosting platforms e.g. Github, Bitbucket, GitLab etc. could have a <strong>&#8220;Open the source&#8221;</strong> trigger-switch for individual projects where a software developer can enable the trigger with some condition&nbsp;like:</p>
+<ul>
+<li><span class="dquo">&#8220;</span><strong>Open the source</strong>&#8221; if I don&#8217;t login Github for <code>1 year</code> (which means I am dead or gone crazy to remember&nbsp;Github)</li>
+<li><span class="dquo">&#8220;</span><strong>Open the source</strong>&#8221; on a pre-set date e.g. <code>2020-02-20</code></li>
+</ul>
+<p><em>[dear reader, thanks a lot for reading upto here. I am sure, there are many points missing on this post. Also, as English is not my first language, hence there must some misused words or phrase. But you get the idea. Please comment/criticise/point out the missing staffs. I will try to discuss, update, correct&nbsp;that.]</em></p>
+  </div>
+
+
+    <div class="comments">
+      <div id="disqus_thread"></div>
+      <script type="text/javascript">
+        var disqus_shortname = 'kmonsoor';
+        var disqus_identifier = "open-source-as-if-you-gonna-die-tonight/";
+        var disqus_title = "Open Source as-if You Gonna Die Tonight";
+        var disqus_url = "http://blog.kmonsoor.com/open-source-as-if-you-gonna-die-tonight/";
+        (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus</a>.</noscript>
+    </div>
+
+          </div>
+
+            <div class="span3">
+  <div class="well">
+
+    <p><abbr class="fa fa-calendar" title="2015-12-22T00:00:00+06:00"> Dec. 22, 2015</abbr></p>
+
+
+    <hr/>
+
+      <p>
+              <a href="http://blog.kmonsoor.com/category/tech/" rel="tag tooltip" class="label label-info" data-placement="right" data-original-title="8 articles in this category">tech</a>
+            <a href="/tag/software/" rel="tooltip" class="label" data-placement="right" data-original-title="2 articles with this tag">software</a>
+            <a href="/tag/oss/" rel="tooltip" class="label" data-placement="right" data-original-title="1 article with this tag">OSS</a>
+            <a href="/tag/death/" rel="tooltip" class="label" data-placement="right" data-original-title="1 article with this tag">death</a>
+            <a href="/tag/personal/" rel="tooltip" class="label" data-placement="right" data-original-title="1 article with this tag">personal</a>
+            <a href="/tag/source-control/" rel="tooltip" class="label" data-placement="right" data-original-title="1 article with this tag">source-control</a>
+            <a href="/tag/projects/" rel="tooltip" class="label" data-placement="right" data-original-title="1 article with this tag">projects</a>
+            <a href="/tag/open-source/" rel="tooltip" class="label" data-placement="right" data-original-title="1 article with this tag">open-source</a>
+            <a href="/tag/truck-factor/" rel="tooltip" class="label" data-placement="right" data-original-title="1 article with this tag">truck-factor</a>
+            <a href="/tag/coding/" rel="tooltip" class="label" data-placement="right" data-original-title="1 article with this tag">coding</a>
+            <a href="/tag/bus-factor/" rel="tooltip" class="label" data-placement="right" data-original-title="1 article with this tag">bus-factor</a>
+      </p>
+      <hr/>
+
+
+      <ul class="pager">
+        <li class="previous "><a  href="http://blog.kmonsoor.com/pelican-create-a-prefilled-markdown-post/" title="Pelican blog : Create a prefilled MarkDown(*.md) post"  rel="prev">← Older</a></li>
+        <li class="next  disabled "><a  rel="next">Newer →</a></li>
+      </ul>
+
+  </div>
+              
+            </div>
+
+        </div>
+      </section>
+
+    </div>
+
+    <!-- TODO: make footer sticky -->
+    <footer class="container-fluid">
+      <div class="container">
+        <div class="row">
+
+            <div class="span2">
+                <h5>Social</h5>
+                <ul class="unstyled">
+                  <li>  <a href="http://twitter.com/KhaledMonsoor">
+      <i class="fa fa-twitter"></i>
+    Twitter
+  </a></li>
+                  <li>  <a href="http://plus.google.com/+KhaledMonsoor?rel=author">
+    Google Plus
+  </a></li>
+                  <li>  <a href="http://www.instagram.com/kmonsoor/">
+    Instagram
+  </a></li>
+                </ul>
+            </div>
+            <div class="span2">
+                <h5>Professional profiles</h5>
+                <ul class="unstyled">
+                  <li>  <a href="https://googledrive.com/host/0B_IybRcQsDwaTGduUi1jR3h6aDQ/blog/Resume__KhaledMonsoor.pdf">
+    Resume PDF
+  </a></li>
+                  <li>  <a href="http://careers.stackoverflow.com/kmonsoor">
+    Careers 2.0
+  </a></li>
+                  <li>  <a href="http://linkedin.com/in/kmonsoor">
+      <i class="fa fa-linkedin-square"></i>
+    LinkedIn
+  </a></li>
+                  <li>  <a href="http://github.com/kmonsoor">
+      <i class="fa fa-github"></i>
+    Github
+  </a></li>
+                </ul>
+            </div>
+
+          <div class="span2">
+            <h5>Browse content by</h5>
+            <ul class="fa-ul">
+
+                <li><a href="/category/tech/feed/atom/index.html"><i class="fa-li fa fa-rss"></i> Feed</a></li>
+            </ul>
+          </div>
+
+          <div class="span2 muted">
+            <h5>Copyright notice</h5>
+            <p>© Copyright 2012-2015 Khaled Monsoor.</p>
+          </div>
+
+          <div class="span2 muted">
+            <h5>Disclaimer</h5>
+              <p>All opinions expressed in this site are my own personal opinions               and are not endorsed by, nor do they represent the opinions of my               previous, current and future employers or any of its affiliates,               partners or customers.</p>
+          </div>
+
+          <div class="span2">
+            <h5 class="pull-right"><a href="#" class="fa fa-arrow-up"> Back to top</a></h5>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row span12 muted text-center">
+          Site generated by <a href="http://getpelican.com"> Pelican</a>.<br/>
+          <a href="https://github.com/kdeldycke/plumage"> Plumage</a> theme by <a href="http://kevin.deldycke.com">Kevin Deldycke</a>.
+        </div>
+      </div>
+
+    </footer>
+
+   <script type="text/javascript">
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-20431143-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.0/jquery.magnific-popup.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.1.0/jquery.fitvids.min.js"></script>
+    <script src="http://blog.kmonsoor.com/theme/js/jquery.mglass.js"></script>
+    <script src="http://blog.kmonsoor.com/theme/js/application.js"></script>
+
+  </body>
+</html>

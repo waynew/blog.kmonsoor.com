@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+
+    <title>  Se7en Deadly Sins to Do in Python code
+ | kmonsoor's online hub</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content=""/>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/bootstrap/2.3.2/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/bootstrap/2.3.2/css/bootstrap-responsive.min.css"/>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/fontawesome/4.0.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.0/magnific-popup.min.css"/>
+    <link rel="stylesheet" href="http://blog.kmonsoor.com/theme/css/jquery.mglass.css"/>
+    <link rel="stylesheet" href="http://blog.kmonsoor.com/theme/css/pygment-solarized-dark.css"/>
+    <link rel="stylesheet" href="http://blog.kmonsoor.com/theme/css/style.css"/>
+
+    <!-- Fonts -->
+    <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
+    <link href='//fonts.googleapis.com/css?family=Istok+Web' rel='stylesheet' type='text/css'/>
+    <link href='//fonts.googleapis.com/css?family=Droid+Sans+Mono' rel='stylesheet' type='text/css'/>
+      <link href='//fonts.googleapis.com/css?family=Expletus+Sans' rel='stylesheet' type='text/css'>
+
+
+    <link rel="icon" href="http://blog.kmonsoor.com/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="http://blog.kmonsoor.com/favicon.ico" type="image/x-icon">
+
+    <!-- Feeds -->
+      <link href="/feed/atom/index.html" type="application/atom+xml" rel="alternate" title="kmonsoor&#39;s online hub Atom Feed"/>
+      <link href="/feed/index.html" type="application/rss+xml" rel="alternate" title="kmonsoor&#39;s online hub RSS Feed"/>
+      <link href="/category/tech/feed/atom/index.html" type="application/atom+xml" rel="alternate" title="kmonsoor&#39;s online hub Categories Atom Feed"/>
+      <link href="/category/tech/feed/index.html" type="application/rss+xml" rel="alternate" title="kmonsoor&#39;s online hub Categories RSS Feed"/>
+
+
+  </head>
+
+  <body>
+    <div class="container">
+
+      <header>
+        <div class="page-header">
+            <a href="http://blog.kmonsoor.com" class="avatar-container">
+              <div class="avatar ">
+                <div class="side"><img src="/logo.png"/></div>
+              </div>
+            </a>
+          <h1><a href="http://blog.kmonsoor.com">kmonsoor's online hub</a> <small>my internet corner</small></h1>
+        </div>
+
+        <div class="navbar">
+          <div class="navbar-inner">
+            <a class="brand" href="http://blog.kmonsoor.com" title="my internet corner">kmonsoor's online hub</a>
+            <ul class="nav">
+<li ><a href="/">Home</a></li>
+<li ><a href="/category/tech/">Tech</a></li>
+                  <li ><a href="http://blog.kmonsoor.com/about/">About</a></li>
+            </ul>
+              <form class="navbar-search pull-right" action="http://blog.kmonsoor.com/search.html" onsubmit="return validateForm(this.elements['q'].value);">
+                <input type="text" name="q" id="tipue_search_input" class="search-query span2" placeholder="Search" required/>
+                <i class="fa fa-search fa-fw"></i>
+              </form>
+          </div>
+        </div>
+      </header>
+
+      <section>
+
+        <div class="row">
+          <div class=" span9  ">
+  <h1>
+    <a href="http://blog.kmonsoor.com/seven-deadly-sins-in-python-code/" rel="bookmark" title="Permalink to Se7en Deadly Sins to Do in Python code">Se7en Deadly Sins to Do in Python&nbsp;code</a>
+  </h1>
+          </div>
+        </div>
+
+        <div class="row">
+
+
+          <div class=" span9 " id="content" role="main">
+  
+
+  <div>
+    <h3>Prelude</h3>
+<p>I have used the word &#8220;deadly&#8221; to express the potential to diminish the productivity of a Python programmer or his fellow teammate(s) who will work on the same code. Please take all these with quite a bit of salt, due to my limited expertise <span class="amp">&amp;</span> limited experience with different types of projects based on&nbsp;Python.*</p>
+<p><em>7</em> is just a catchy number. And, of course, this top list is subject to change along with my experience.<br />
+You are also most welcome to suggest your own-finding to make into this&nbsp;list.</p>
+<p>There are a lot of ways someone can make his (or her) Python code extremely difficult for himself and his fellow developers to work with and maintain. However, some are quite destructive by virtue. These ones are in my&nbsp;top-list.</p>
+<h3><strong>1. The <code>try: except: pass</code> trio</strong></h3>
+<p>You know about design patterns, right ? At least, you know a little&nbsp;bit.  </p>
+<p>From <a href="https://en.wikipedia.org/wiki/Software_design_pattern">Wikipedia</a>,</p>
+<blockquote>
+<p>Design patterns can speed up the development process by providing tested, proven development&nbsp;paradigms. </p>
+<p>Effective software design requires considering issues that may not become visible until later in the implementation. Reusing design patterns helps to prevent subtle issues that can cause major problems, and it also improves code readability for coders and architects who are familiar with the&nbsp;patterns.</p>
+</blockquote>
+<p>Now, think of the complete opposite of design-pattern. It is called <em>anti-pattern</em> which silently &#8220;destroys&#8221; efficiency in code. The below pattern can be considered the most deadly anti-pattern in Python code.<br />
+<a href="http://redsymbol.net/">Aaron Maxwell</a> called it <a href="https://realpython.com/blog/python/the-most-diabolical-python-antipattern/">most diabolical</a> or &#8221;evil&#8221;&nbsp;anti-pattern.</p>
+<div class="codehilite" style="background: #202020"><pre style="line-height: 125%"><span style="color: #6ab825; font-weight: bold">try</span><span style="color: #d0d0d0">:</span>
+    <span style="color: #d0d0d0">subtle_buggy_operation()</span>   <span style="color: #999999; font-style: italic"># possibly with I/O or DB operation</span>
+<span style="color: #6ab825; font-weight: bold">except</span><span style="color: #d0d0d0">:</span>
+    <span style="color: #6ab825; font-weight: bold">pass</span>
+</pre></div>
+
+
+<p>You thought to save some development time by &#8220;pass&#8221;ing them by. But, it will take hours, if not days, to find possible bugs, inside the block, later as all the exceptions are masked by the &#8220;pass&#8221; and the error location will be somewhere else outside this <code>try:except</code> block which may look like the most innocent&nbsp;code.</p>
+<p>Again, quoting from Aaron&nbsp;&#8230;</p>
+<blockquote>
+<p>In my nearly ten years of experience writing applications in Python, both individually and as part of a team, this pattern has stood out as the single greatest drain on developer productivity and application reliability, especially over the long&nbsp;term.</p>
+</blockquote>
+<h3><strong>2. Wildcard imports i.e. <code>from module import *</code> </strong></h3>
+<p>This one single practice can render a nice (clean) module into a nightmare. According to a core Python developer <a href="http://python.net/~goodger/projects/pycon/2007/idiomatic/handout.html#importing">David Goodger</a>,</p>
+<blockquote>
+<p>Wild-card imports are from the dark side of&nbsp;Python.</p>
+<p><strong>Never!</strong></p>
+<p>The <code>from module import *</code> wild-card style leads to namespace pollution. You&#8217;ll get things in your local namespace that you didn&#8217;t expect to get. You may see imported names obscuring module-defined local names. You won&#8217;t be able to figure out where certain names come from. Although a convenient shortcut, this should not be in production&nbsp;code.</p>
+<p><strong>Moral:</strong> don&#8217;t use wild-card&nbsp;imports!</p>
+</blockquote>
+<p>Also, in light of <a href="http://www.yodaquotes.net/">Yoda&#8217;s mythical conversation</a>s, David&nbsp;writes:</p>
+<blockquote>
+<p><span class="caps">LUKE</span>: Is from module import * better than explicit imports?<br />
+<span class="caps">YODA</span>: No, not better. Quicker, easier, more seductive.<br />
+<span class="caps">LUKE</span>: But how will I know why explicit imports are better than the wild-card form?<br />
+<span class="caps">YODA</span>: Know you will when your code you try to read six months from&nbsp;now.  </p>
+</blockquote>
+<p>If you use this practice in between inter-connected modules in a mid-sized project, worry not. You&#8217;ll start to get errors due to circular references soon&nbsp;enough.</p>
+<p>Sounds funny&nbsp;?</p>
+<h3><strong>3. Thinking that <code>try:except:else</code> construct is not a natural control flow in&nbsp;Python</strong></h3>
+<p>If you are coming from Java(or, similar) world, I understand your confusion. However, Python adopted this construct so much different than Java. It helps to realize Python&#8217;s philosophy <a href="https://docs.python.org/2/glossary.html#term-eafp">Ask for Forgiveness than Permission</a>, aka &#8221;<span class="caps">EAFP</span>&nbsp;paradigm&#8221;.</p>
+<p>Trying to avoid this will result in messy, unpythonic code. As this <a href="http://stackoverflow.com/a/16138864/617185">great answer on StackOverflow</a>, by a core Python developer, Raymond Hettinger, on this matter where he nicely portrays the philosophy behind&nbsp;it.</p>
+<p>Quoting him&nbsp;:</p>
+<blockquote>
+<p>In the Python world, using exceptions for flow control is common and normal. Even the Python core developers use exceptions for flow-control and that style is heavily baked into the language (i.e. the iterator protocol uses <em>StopIteration</em> to signal loop termination). In addition, the try-except-style is used to prevent the race-conditions inherent in some of the &#8221;look-before-you-leap&#8221;&nbsp;constructs.  </p>
+<p>For example, testing <code>os.path.exists</code> results in information that may be out-of-date by the time you use it. Likewise, <code>Queue.full</code> returns information that may be stale. The <code>try:except:else</code> style will produce more reliable code in these cases. In some other languages, that rule reflects their cultural norms as reflected in their libraries. The &#8220;rule&#8221; is also based in-part on performance considerations for those&nbsp;languages.</p>
+</blockquote>
+<p>Also, consider checking out <a href="http://stackoverflow.com/a/180974/617185">this Q&amp;A on StackOverflow</a> on the same&nbsp;premise.</p>
+<h3><strong>4. Making everything a Class aka Overusing&nbsp;classes</strong></h3>
+<p>What I am referring to is <a href="https://www.youtube.com/watch?v=o9pEzgHorH0">this talk by Jack Diederich</a> on PyCon 2012. You should watch this couple of times and then once in every week.<br />
+His summary is like &#8230; <strong>Stop</strong> creating classes, and modules in every now and then. Before creating one, think hard. Probably, what you need is writing just a&nbsp;function.</p>
+<p><a href="https://www.python.org/dev/peps/pep-0020/">Zen of Python</a> described it as below.
+Read it again, again, and&nbsp;again.</p>
+<blockquote>
+<ul>
+<li>Beautiful is better than&nbsp;ugly.</li>
+<li>Explicit is better than&nbsp;implicit.</li>
+<li>Simple is better than&nbsp;complex.</li>
+<li>Flat is better than&nbsp;nested.</li>
+<li>Readability&nbsp;counts.</li>
+<li>If the implementation is hard to explain, it&#8217;s a bad&nbsp;idea.</li>
+</ul>
+</blockquote>
+<p>Though the below is a perfectly valid class, it is a perfect example case of b***sh*t&nbsp;classes:</p>
+<div class="codehilite" style="background: #202020"><pre style="line-height: 125%"><span style="color: #6ab825; font-weight: bold">class</span> <span style="color: #447fcf; text-decoration: underline">Greeting</span><span style="color: #d0d0d0">(</span><span style="color: #24909d">object</span><span style="color: #d0d0d0">):</span>
+    <span style="color: #6ab825; font-weight: bold">def</span> <span style="color: #447fcf">__init__</span><span style="color: #d0d0d0">(</span><span style="color: #24909d">self</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">greeting=</span><span style="color: #ed9d13">&#39;hello&#39;</span><span style="color: #d0d0d0">):</span>
+        <span style="color: #24909d">self</span><span style="color: #d0d0d0">.greeting</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">greeting</span>
+
+    <span style="color: #6ab825; font-weight: bold">def</span> <span style="color: #447fcf">greet</span><span style="color: #d0d0d0">(</span><span style="color: #24909d">self</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">name):</span>
+        <span style="color: #6ab825; font-weight: bold">return</span> <span style="color: #ed9d13">&#39;%s! %s&#39;</span> <span style="color: #d0d0d0">%</span> <span style="color: #d0d0d0">(</span><span style="color: #24909d">self</span><span style="color: #d0d0d0">.greeting,</span> <span style="color: #d0d0d0">name)</span>
+
+<span style="color: #d0d0d0">greeting</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">Greeting(</span><span style="color: #ed9d13">&#39;hola&#39;</span><span style="color: #d0d0d0">)</span>
+<span style="color: #6ab825; font-weight: bold">print</span> <span style="color: #d0d0d0">greeting.greet(</span><span style="color: #ed9d13">&#39;bob&#39;</span><span style="color: #d0d0d0">)</span>
+</pre></div>
+
+
+<p>It is doing exactly same&nbsp;as:</p>
+<div class="codehilite" style="background: #202020"><pre style="line-height: 125%"><span style="color: #6ab825; font-weight: bold">def</span> <span style="color: #447fcf">greet</span><span style="color: #d0d0d0">(greeting,</span> <span style="color: #d0d0d0">target):</span>
+    <span style="color: #6ab825; font-weight: bold">return</span> <span style="color: #ed9d13">&#39;%s! %s&#39;</span> <span style="color: #d0d0d0">%</span> <span style="color: #d0d0d0">(greeting,</span> <span style="color: #d0d0d0">target)</span>
+</pre></div>
+
+
+<p>He also showed a practical example how he simplified (aka re-factored) an <span class="caps">API</span>&#8217;s complete code,&nbsp;consisting:</p>
+<ul>
+<li>1 Package, 22&nbsp;Modules,</li>
+<li>20&nbsp;Classes,</li>
+<li>660 Source Lines of&nbsp;Code</li>
+</ul>
+<p>into this below, a grand total of 8 lines. Yes, just 8 lines&nbsp;!!!</p>
+<div class="codehilite" style="background: #202020"><pre style="line-height: 125%"><span style="color: #d0d0d0">MUFFIN_API</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">url=</span><span style="color: #ed9d13">&#39;https://api.wbsrvc.com/%s/%s/&#39;</span>
+<span style="color: #d0d0d0">MUFFIN_API_KEY</span> <span style="color: #d0d0d0">=</span> <span style="color: #ed9d13">&#39;SECRET-API-KEY&#39;</span>
+
+<span style="color: #6ab825; font-weight: bold">def</span> <span style="color: #447fcf">request</span><span style="color: #d0d0d0">(noun,</span> <span style="color: #d0d0d0">verb,</span> <span style="color: #d0d0d0">**params):</span>
+    <span style="color: #d0d0d0">headers</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">{</span><span style="color: #ed9d13">&#39;apikey&#39;</span> <span style="color: #d0d0d0">:</span> <span style="color: #d0d0d0">MUFFIN_API_KEY}</span>
+    <span style="color: #d0d0d0">request</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">urllib2.Request(MUFFIN_API</span> <span style="color: #d0d0d0">%</span> <span style="color: #d0d0d0">(noun,</span> <span style="color: #d0d0d0">verb),</span> \
+                              <span style="color: #d0d0d0">urllib.urlencode(params),</span> <span style="color: #d0d0d0">headers)</span>
+    <span style="color: #6ab825; font-weight: bold">return</span> <span style="color: #d0d0d0">json.loads(urllib2.urlopen(request).read())</span>
+</pre></div>
+
+
+<p><strong>Moral:</strong></p>
+<ul>
+<li>Stop re-inventing the&nbsp;wheel, </li>
+<li>use more of built-in library&nbsp;functions, </li>
+<li>use much-less own long chains of&nbsp;class-hierarchy. </li>
+</ul>
+<p>Still want to see a worst scenario of creating classes? Check this&nbsp;out:</p>
+<div class="codehilite" style="background: #202020"><pre style="line-height: 125%"><span style="color: #6ab825; font-weight: bold">class</span> <span style="color: #447fcf; text-decoration: underline">Flow</span><span style="color: #d0d0d0">(</span><span style="color: #24909d">object</span><span style="color: #d0d0d0">):</span>
+    <span style="color: #ed9d13">&quot;&quot;&quot;Base class for all Flow objects.&quot;&quot;&quot;</span>
+    <span style="color: #6ab825; font-weight: bold">pass</span>
+
+<span style="color: #6ab825; font-weight: bold">class</span> <span style="color: #447fcf; text-decoration: underline">Storage</span><span style="color: #d0d0d0">(</span><span style="color: #24909d">object</span><span style="color: #d0d0d0">):</span>
+    <span style="color: #6ab825; font-weight: bold">def</span> <span style="color: #447fcf">put</span><span style="color: #d0d0d0">(</span><span style="color: #24909d">self</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">data):</span> <span style="color: #d0d0d0">_abstract()</span>
+    <span style="color: #6ab825; font-weight: bold">def</span> <span style="color: #447fcf">get</span><span style="color: #d0d0d0">(</span><span style="color: #24909d">self</span><span style="color: #d0d0d0">):</span> <span style="color: #d0d0d0">_abstract()</span>
+
+<span style="color: #6ab825; font-weight: bold">def</span> <span style="color: #447fcf">_abstract</span><span style="color: #d0d0d0">():</span> <span style="color: #6ab825; font-weight: bold">raise</span> <span style="color: #bbbbbb">NotImplementedError</span>
+</pre></div>
+
+
+<p>Yes, this is a real piece of code from Google <span class="caps">API</span> client code. (which, in total, has <em>10,000 <span class="caps">SLOC</span>, 115 modules, 207 classes</em>). Whereas <a href="https://github.com/jackdied/python-foauth2">someone did implemented the same</a>, well maybe not extremely robust, but in <em>135 <span class="caps">SLOC</span>, 3 classes</em> in&nbsp;total.</p>
+<p>You see the point, right? Guido did. <a href="https://plus.google.com/+JackDiederich/posts/iPiqWHjwcf3">Check his&nbsp;comment.</a></p>
+<p><img alt="guido-google-comment" src="http://blog.kmonsoor.com/images/articles/guido-google-comment.jpg" /></p>
+<h3><strong>5. Saving time by not writing any documentation or inline&nbsp;comments</strong></h3>
+<p>If you don&#8217;t write comments with your semi-obfuscated code, and no docstrings as well saving time and meeting deadlines, stay assure that within a short period you&#8217;ll hate yourself when you will not remember what (&amp; why) you did something while reading your own&nbsp;code.</p>
+<p>Today or tomorrow, you will leave the company. And, that code will haunt all the members of your team who will come across this code-like zombies; unless they totally cut-off-the-head(e.g. replace) of your&nbsp;code. </p>
+<p>There is just no excuse that you don&#8217;t do &#8220;documentation&#8221; except you just don&#8217;t care. If you would care, you would not only write minimal doc-strings and comments on complex code-sections, but also name your functions, methods, variables to reflect the purpose of the component to make them&nbsp;&#8220;self-documented&#8221;.</p>
+<p>Here is a nice guide to properly <a href="http://docs.python-guide.org/en/latest/writing/documentation/">documenting your Python&nbsp;code.</a></p>
+<p>However, there will still be deniers out there&nbsp;&#8230;</p>
+<p><img alt="code-quality" src="https://googledrive.com/host/0B_IybRcQsDwaTGduUi1jR3h6aDQ/blog/code_quality.png" />
+                * source: https://xkcd.com/1513/&nbsp;*</p>
+<h3><strong>6. Avoiding Unit-tests (and doc-tests) until the&nbsp;doomsday comes</strong></h3>
+<p>Yes, the judgement day will come.<br />
+It will happen on the production server, with customer&#8217;s downtime due to a &#8221;completely&#8221; manually-tested new feature, which will break something &#8220;almost&#8221;&nbsp;unrelated.</p>
+<p>Yes, your company can lose millions and <a href="http://dougseven.com/2014/04/17/knightmare-a-devops-cautionary-tale/">can be out of business.</a> Maybe after some sleep-less night of the development team, the &#8220;bug&#8221; would have found&nbsp;out.</p>
+<p>Maybe, this whole mess could be simply avoided if the developer wrote his/her modules&#8217; <a href="https://docs.python.org/2/library/unittest.html">unit-test</a> as well as <a href="https://docs.python.org/2/library/doctest.html">doctests</a> for the functions or methods. And, after implementing the feature he would have run the tests once across the project. The online book Dive-in-Python has an excellent introduction on <code>unittest</code>. Also, you can start with <a href="http://docs.python-guide.org/en/latest/writing/tests/#unittest">Hitchhiker&#8217;s guide&#8217;s introduction</a>.</p>
+<h3><strong>7. Mixing <code>TAB</code> and <code>SPACE</code> in the same&nbsp;file</strong></h3>
+<p>You will need no more reason to curse yourself just a while after. It will haunt you whenever you&#8217;ll need to open the source-code in any editor other than your usual one. And, for others, &#8220;oh my! I can&#8217;t literally&nbsp;even&#8230;&#8221;.</p>
+<p>While Python<strong>3</strong> will simply refuse to interpret this &#8220;half-breed&#8221; file, in Python<strong>2</strong>, the interpretation of <span class="caps">TAB</span> is as if it is converted to spaces using 8-space tab stops. So while executing, you may have no clue how a specific-line is being executed as part of which&nbsp;code-block.</p>
+<p>For any code that you think someday someone else will read or use, to avoid confusion, you should stick with <a href="http://legacy.python.org/dev/peps/pep-0008/#tabs-or-spaces"><span class="caps">PEP</span>-8</a>, or your team-specific coding style. <span class="caps">PEP</span>-8 strongly discourage mixing <span class="caps">TAB</span> and Space in a same&nbsp;file.</p>
+<p>Also, check out this <a href="http://programmers.stackexchange.com/a/197839/74557">Q&amp;A on&nbsp;StackExchange.</a></p>
+<blockquote>
+<p>​1. The first downside is that it quickly becomes a&nbsp;mess.</p>
+<p>&#8230; Formatting should be the task of the <span class="caps">IDE</span>. Developers have already enough work to care about the size of tabs, how much spaces will an <span class="caps">IDE</span> insert, etc. The code should be formatted correctly, and displayed correctly on other configurations, without forcing developers to think about&nbsp;it.  </p>
+</blockquote>
+<p>Also, <a href="http://www.secnetix.de/olli/Python/block_indentation.hawk">remember&nbsp;this</a></p>
+<blockquote>
+<p>Furthermore, it can be a good idea to avoid tabs altogether, because the semantics of tabs are not very well-defined in the computer world, and they can be displayed completely differently on different types of systems and editors. <br />
+Also, tabs often get destroyed or wrongly converted during <em>copy-paste</em> operations, or when a piece of source code is inserted into a web page or other kind of markup&nbsp;code.</p>
+</blockquote>
+<h3><strong>Fin</strong></h3>
+<p>That&#8217;s all for now. That&#8217;s my list. This list hopes to evolve with my experience and expertise as well as the ever-changing collective wisdom of all the Python&nbsp;community.</p>
+<p>What&#8217;s your take on the worst &#8220;un-pythonic&#8221; nightmares in Python code?  Please feel free to share your&nbsp;2-cents.</p>
+  </div>
+
+
+    <div class="comments">
+      <div id="disqus_thread"></div>
+      <script type="text/javascript">
+        var disqus_shortname = 'kmonsoor';
+        var disqus_identifier = "seven-deadly-sins-in-python-code/";
+        var disqus_title = "Se7en Deadly Sins to Do in Python code";
+        var disqus_url = "http://blog.kmonsoor.com/seven-deadly-sins-in-python-code/";
+        (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus</a>.</noscript>
+    </div>
+
+          </div>
+
+            <div class="span3">
+  <div class="well">
+
+    <p><abbr class="fa fa-calendar" title="2015-08-10T17:05:00+06:00"> Aug. 10, 2015</abbr></p>
+
+
+    <hr/>
+
+      <p>
+              <a href="http://blog.kmonsoor.com/category/tech/" rel="tag tooltip" class="label label-info" data-placement="right" data-original-title="8 articles in this category">tech</a>
+            <a href="/tag/programming/" rel="tooltip" class="label" data-placement="right" data-original-title="2 articles with this tag">programming</a>
+            <a href="/tag/python/" rel="tooltip" class="label" data-placement="right" data-original-title="1 article with this tag">python</a>
+            <a href="/tag/software-development/" rel="tooltip" class="label" data-placement="right" data-original-title="1 article with this tag">software development</a>
+            <a href="/tag/software-documentation/" rel="tooltip" class="label" data-placement="right" data-original-title="1 article with this tag">software documentation</a>
+            <a href="/tag/worst-practices/" rel="tooltip" class="label" data-placement="right" data-original-title="1 article with this tag">worst practices</a>
+            <a href="/tag/code-quality/" rel="tooltip" class="label" data-placement="right" data-original-title="1 article with this tag">code quality</a>
+            <a href="/tag/debugging/" rel="tooltip" class="label" data-placement="right" data-original-title="1 article with this tag">debugging</a>
+            <a href="/tag/best-practices/" rel="tooltip" class="label" data-placement="right" data-original-title="1 article with this tag">best practices</a>
+      </p>
+      <hr/>
+
+
+      <ul class="pager">
+        <li class="previous "><a  href="http://blog.kmonsoor.com/generate-er-diagram-from-sql-database/" title="[Step-by-step][How to] Generate ER diagram from a PostgreSQL (or any) database"  rel="prev">← Older</a></li>
+        <li class="next "><a  href="http://blog.kmonsoor.com/top-bangladeshi-stackoverflow-rockstars/" title="Top Bangladeshi StackOverflow rockstars"  rel="next">Newer →</a></li>
+      </ul>
+
+  </div>
+              
+            </div>
+
+        </div>
+      </section>
+
+    </div>
+
+    <!-- TODO: make footer sticky -->
+    <footer class="container-fluid">
+      <div class="container">
+        <div class="row">
+
+            <div class="span2">
+                <h5>Social</h5>
+                <ul class="unstyled">
+                  <li>  <a href="http://twitter.com/KhaledMonsoor">
+      <i class="fa fa-twitter"></i>
+    Twitter
+  </a></li>
+                  <li>  <a href="http://plus.google.com/+KhaledMonsoor?rel=author">
+    Google Plus
+  </a></li>
+                  <li>  <a href="http://www.instagram.com/kmonsoor/">
+    Instagram
+  </a></li>
+                </ul>
+            </div>
+            <div class="span2">
+                <h5>Professional profiles</h5>
+                <ul class="unstyled">
+                  <li>  <a href="https://googledrive.com/host/0B_IybRcQsDwaTGduUi1jR3h6aDQ/blog/Resume__KhaledMonsoor.pdf">
+    Resume PDF
+  </a></li>
+                  <li>  <a href="http://careers.stackoverflow.com/kmonsoor">
+    Careers 2.0
+  </a></li>
+                  <li>  <a href="http://linkedin.com/in/kmonsoor">
+      <i class="fa fa-linkedin-square"></i>
+    LinkedIn
+  </a></li>
+                  <li>  <a href="http://github.com/kmonsoor">
+      <i class="fa fa-github"></i>
+    Github
+  </a></li>
+                </ul>
+            </div>
+
+          <div class="span2">
+            <h5>Browse content by</h5>
+            <ul class="fa-ul">
+
+                <li><a href="/category/tech/feed/atom/index.html"><i class="fa-li fa fa-rss"></i> Feed</a></li>
+            </ul>
+          </div>
+
+          <div class="span2 muted">
+            <h5>Copyright notice</h5>
+            <p>© Copyright 2012-2015 Khaled Monsoor.</p>
+          </div>
+
+          <div class="span2 muted">
+            <h5>Disclaimer</h5>
+              <p>All opinions expressed in this site are my own personal opinions               and are not endorsed by, nor do they represent the opinions of my               previous, current and future employers or any of its affiliates,               partners or customers.</p>
+          </div>
+
+          <div class="span2">
+            <h5 class="pull-right"><a href="#" class="fa fa-arrow-up"> Back to top</a></h5>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row span12 muted text-center">
+          Site generated by <a href="http://getpelican.com"> Pelican</a>.<br/>
+          <a href="https://github.com/kdeldycke/plumage"> Plumage</a> theme by <a href="http://kevin.deldycke.com">Kevin Deldycke</a>.
+        </div>
+      </div>
+
+    </footer>
+
+   <script type="text/javascript">
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-20431143-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.0/jquery.magnific-popup.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.1.0/jquery.fitvids.min.js"></script>
+    <script src="http://blog.kmonsoor.com/theme/js/jquery.mglass.js"></script>
+    <script src="http://blog.kmonsoor.com/theme/js/application.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>kmonsoor's online hub</title><link>http://blog.kmonsoor.com/</link><description>my internet corner</description><atom:link href="/tag/pre-filled/feed/index.html" rel="self"></atom:link><lastBuildDate>Mon, 21 Dec 2015 00:44:00 +0600</lastBuildDate><item><title>Pelican blog : Create a prefilled MarkDown(*.md) post</title><link>http://blog.kmonsoor.com/pelican-create-a-prefilled-markdown-post/</link><description>&lt;p&gt;I use this Python script to jump-start a new post. Nothing fancy, but useful.&lt;br /&gt;
+Especially, if you are like me; hate to do same staff&amp;nbsp;repeatedly.  &lt;/p&gt;
+&lt;p&gt;Clone this script in your blog&amp;#8217;s working folder on your pc. Once and&amp;nbsp;forever.&lt;/p&gt;
+&lt;div class="codehilite" style="background: #202020"&gt;&lt;pre style="line-height: 125%"&gt;&lt;span style="color: #40ffff"&gt;$ &lt;/span&gt;git clone https://gist.github.com/942d661b4666ddce352f.git
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Now, whenever you create a new post, run it&amp;nbsp;like:&lt;/p&gt;
+&lt;div class="codehilite" style="background: #202020"&gt;&lt;pre style="line-height: 125%"&gt;&lt;span style="color: #40ffff"&gt;$ &lt;/span&gt;python2 ./pelican_new_MD_post_template.py &lt;span style="color: #ed9d13"&gt;&amp;#39;your new blog post title&amp;#39;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Then, it will create a empty post in &lt;code&gt;./content/articles/&lt;/code&gt; folder, by default.&lt;br /&gt;
+Now, edit that post and blog&amp;nbsp;away.&lt;/p&gt;
+&lt;p&gt;Here&amp;#8217;s the&amp;nbsp;script:&lt;/p&gt;
+&lt;div class="gist"&gt;
+    &lt;script src='https://gist.github.com/942d661b4666ddce352f.js'&gt;&lt;/script&gt;
+    &lt;noscript&gt;
+        &lt;pre&gt;&lt;code&gt;"""
+author:  Khaled Monsoor &lt;k@kmonsoor.com&gt;
+modified: 09-Dec-2015
+license: The MIT License
+"""
+
+import sys
+from datetime import datetime
+
+
+MD_TEMPLATE = """
+Title: {title}
+Date:  {year}-{month}-{day} {hour}:{minute}
+Modified:  {year}-{month}-{day} {hour}:{minute}
+Category:  
+Tags: 
+Slug: {slug}
+status: draft
+Summary: 
+
+
+
+"""
+
+
+def make_entry(title):
+    now = datetime.now()
+    slug = title.lower().strip().replace(' ', '-')
+    
+    new_file = "content/articles/{}{:0&gt;2}{:0&gt;2}-{}.md".format(now.year, 
+                                                                now.month, 
+                                                                now.day, slug)
+    MD_TEMPLATE = MD_TEMPLATE.strip().format(title=title,
+                                year=now.year, month=now.month, day=now.day, 
+                                hour=now.hour, minute=now.minute,
+                                slug=slug)
+    with open(new_file, 'w') as f:
+        f.write(MD_TEMPLATE)
+    print("New post file created as: " + new_file)
+
+
+if __name__ == '__main__':
+    if len(sys.argv) &gt; 1:
+        make_entry(sys.argv[1])
+    else:
+        print "No title given"
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/noscript&gt;
+&lt;/div&gt;
+&lt;p&gt;Thanks for being here. Got any improvement suggestions? Plz let me know by comment on either here or on the Github&amp;nbsp;gist.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Khaled Monsoor</dc:creator><pubDate>Mon, 21 Dec 2015 00:44:00 +0600</pubDate><guid>tag:blog.kmonsoor.com,2015-12-21:pelican-create-a-prefilled-markdown-post/</guid><category>pelican</category><category>blog</category><category>new post</category><category>pre-filled</category><category>automation</category></item></channel></rss>
